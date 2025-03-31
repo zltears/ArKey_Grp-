@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - ArKey Grp</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="dashboard-header">
+    <div class="header-left">
+      <h1>ArKey Grp</h1>
+      <p>Bienvenido al Dashboard</p>
+    </div>
+    <button id="logout-button" class="btn-logout">Cerrar sesión</button>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="dashboard-container">
+    <!-- Módulos disponibles -->
+    <section id="modules">
+      <h2>Módulos disponibles</h2>
+      <ul id="module-list">
+        <!-- Los elementos de la lista se llenarán dinámicamente desde app.js -->
+      </ul>
+    </section>
+
+    <!-- Gráfico de estadísticas -->
+    <section class="chart-section">
+      <h2>Estadísticas</h2>
+      <canvas id="myChart"></canvas>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="dashboard-footer">
+    <p>&copy; 2023 ArKey Grp. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Texto blanco para contraste */
+}
+
+/* Página de login */
+body.login-page {
+  background-image: url("/images/login.jpg"); /* Fondo del login */
+}
+
+.login-container {
+  background: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out; /* Animación de entrada */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-container h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.login-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.btn-login {
+  background-color: #007bff; /* Azul primario */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra futurista */
+}
+
+.btn-login:hover {
+  background-color: #0056b3; /* Azul más oscuro */
+  transform: scale(1.05); /* Efecto de proximidad */
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Página del dashboard */
+body.dashboard-page {
+  background-image: url("/images/inicio.jpg"); /* Fondo futurista */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Asegura que el footer esté abajo */
+}
+
+/* Header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente oscuro */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra futurista */
+  border-bottom: 2px solid #00ffff; /* Borde cian futurista */
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-left h1 {
+  font-size: 24px;
+  color: #00ffff; /* Color cian futurista */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra futurista */
+}
+
+.header-left p {
+  font-size: 14px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.btn-logout {
+  background-color: #dc3545; /* Rojo futurista */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra futurista */
+}
+
+.btn-logout:hover {
+  background-color: #b02a37; /* Rojo más oscuro */
+  transform: scale(1.05);
+}
+
+/* Contenedor principal */
+.dashboard-container {
+  flex: 1; /* Asegura que el contenido principal ocupe el espacio restante */
+  background: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente oscuro */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Sombra futurista */
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out; /* Animación de entrada */
+}
+
+.dashboard-container h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #00ffff; /* Color cian futurista */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra futurista */
+}
+
+/* Lista de módulos */
+#module-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+#module-list li.module-item {
+  background: #007bff; /* Azul futurista */
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Sombra futurista */
+}
+
+#module-list li:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada */
+}
+
+#module-list li.module-item:active {
+  background-color: #007777;  /* Color cuando se hace clic */
+}
+
+
+/* Gráficos */
+.chart-section {
+  margin-top: 20px;
+}
+
+.chart-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #00ffff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer */
+.dashboard-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente oscuro */
+  color: #ffffff;
+  font-size: 14px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra futurista */
+  border-top: 2px solid #00ffff; /* Borde cian futurista */
+}
